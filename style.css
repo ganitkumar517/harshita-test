@@ -1,0 +1,231 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+:root {
+  --sideBGColor: #040b14;
+  --themeColor: #00a78e;
+  --iconBGColor: #2c2f3f;
+  --textColor: #525252;
+  --bgColor: #f7f7f7;
+}
+
+header {
+  height: 100vh;
+  width: 300px;
+  padding: 15px 30px;
+  background-color: var(--sideBGColor);
+  overflow-y: auto;
+  position: fixed;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  transition: 0.4s;
+  z-index: 99;
+}
+header.profile {
+  text-align: left;
+}
+header .profile img {
+  width: 160px;
+  height: 200px;
+  padding-right: 5px;
+  padding-top: 2px;
+  border-radius: 50%;
+  border: 5px solid var(--iconBGColor);
+}
+
+header nav {
+  margin-top: 30px;
+}
+header nav ul li {
+  list-style: none;
+}
+header nav ul li a {
+  display: inline-block;
+  text-decoration: none;
+  padding: 7px 10px;
+  margin: 7px 0;
+  color: lightgray;
+  font-weight: 400;
+  font-size: 15px;
+  letter-spacing: 0.6px;
+}
+header nav ul li a i {
+  margin-right: 10px;
+  font-size: 20px;
+  transition: 0.4s;
+}
+header nav ul li a:hover i {
+  color: var(--themeColor);
+}
+header nav ul li .active i {
+  color: var(--themeColor);
+}
+
+main {
+  margin-left: 300px;
+  background-color: var(--bgColor);
+  transition: 0.3s;
+}
+
+#home {
+  height: 100vh;
+  width: 100%;
+  background-color: rgb(39, 153, 39);
+  background-size: cover;
+  background-attachment: fixed;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 70px;
+  position: relative;
+}
+#home::before {
+  content: '';
+  width: 100%;
+  height: 100%;
+  background-color: var(--themeColor);
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+#home .home-row {
+  z-index: 1;
+}
+#home .home-row h1 {
+  font-size: 60px;
+  color: white;
+  font-weight: 500;
+  letter-spacing: -1;
+  margin-bottom: 10px;
+  line-height: 70px;
+}
+#home .home-row p {
+  font-size: 20px;
+  color: white;
+}
+
+#about {
+  padding: 70px 30px;
+}
+
+.sub-heading {
+  color: black;
+  font-size: 40px;
+  margin-bottom: 10px;
+}
+.divider {
+  width: 80px;
+  height: 4px;
+  background-color: var(--themeColor);
+  border-radius: 3px;
+}
+#about .divider ~ p {
+  color: var(--textColor);
+  font-size: 20px;
+  letter-spacing: 0.8px;
+  line-height: 200%;
+  font-weight: 400;
+  margin-top: 15px;
+}
+
+#skills {
+  padding: 70px 30px;
+}
+
+#skills .skills-row {
+  background-color: rgb(228, 248, 241);
+  margin-top: 50px;
+  padding: 50px;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-gap: 35px;
+}
+
+#skills .skills-row .skills-item {
+  position: relative;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 20%);
+}
+
+#skills .skills-row .skills-item .skills-img img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+#skills .skills-row .skills-item .skills-info {
+  text-align: center;
+  font-size: 150%;
+  font-weight: 400;
+}
+
+#education {
+  padding: 70px 30px;
+}
+#education .edu-row {
+  background-color: rgb(228, 248, 241);
+  margin-top: 50px;
+  padding: 30px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 35px;
+  text-align: left;
+}
+#education .edu-row .edu-item {
+  position: relative;
+  padding: 30px;
+  overflow: hidden;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 20%);
+}
+#education .edu-row .edu-item .edu-item-college {
+  font-size: 20px;
+  font-weight: 300;
+  color: darkblue;
+}
+#education .edu-row .edu-item .edu-item-city {
+  margin-top: 2%;
+  margin-bottom: 2%;
+}
+#education .edu-row .edu-item .edu-item-degree {
+  margin-bottom: 2%;
+}
+#education .edu-row .edu-item .course-list {
+  padding-left: 5%;
+}
+
+#contact {
+  padding: 70px 30px;
+}
+#contact nav {
+  margin-top: 30px;
+  padding: 20px;
+  display: flex;
+}
+#contact nav ul li {
+  list-style: none;
+}
+#contact nav ul li a {
+  display: inline-block;
+  text-decoration: none;
+  padding: 7px 10px;
+  margin: 7px 0;
+  color: black;
+  font-weight: 400;
+  font-size: 25px;
+  letter-spacing: 0.6px;
+}
+#contact nav ul li a i {
+  margin-right: 50px;
+  font-size: 40px;
+  transition: 0.4s;
+}
+#contact nav ul li a:hover i {
+  color: var(--themeColor);
+}
